@@ -49,6 +49,7 @@
 //     age: 24,
 //     childObj: {
 //         newName: 'Parvez',
+
 //         getDetails(){
 //             console.log(this.newName, " and ",this.name);
 //         }
@@ -66,16 +67,19 @@
 // }
 
 
-// let user = {
-//     name : 'Prikshit',
-//     age: 24,
-//     getDetails: ()=>{
-//         const nestedArrow = () => console.log(this.age);
-//         nestedArrow();
-//     }
-// }
+let user = {
+  name: "Prikshit",
+  age: 24,
+  getDetails (){
+    function abc() {
+      const nestedArrow = () => console.log(this);
+      nestedArrow();
+    }
+    abc();
+  },
+};
 
-// user.getDetails();
+user.getDetails();
 
 // const user = {
 //     firstName: 'Prikshit',
