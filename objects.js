@@ -195,9 +195,66 @@
 // console.log(racing);
 
 /// the topics left in today's class
-// shall & deep copy
-// call bind and apply
+// shallow & deep copy
 // shallow means refrence copy and
 //  deep copy means like make new things in memory
 // cover that key value swapping question
 
+
+////// COPYING USING SPREAD OPERATOR
+// console.log('test');
+
+// //
+// /// this is a deep copy
+// let a={
+//     x:10,
+// }
+
+// let b = {...a} ;
+
+// b.x=100; 
+
+// console.log(a);
+// console.log(b);
+
+// let a = {
+//   x: 10,
+//   y: {
+//     ind: 15,
+//     aus: 400,
+//   },
+// };
+
+// let b = { ...a };
+
+// b.x=100;
+
+// b.y.ind=100;
+
+// console.log(a);
+// console.log(b);
+// /// deep copying using spread opertor will not
+// /// work in nested objects
+
+
+
+/////COPYING USING JSON.STRINGFY
+let a = {
+  x: 10,
+  y: {
+    ind: 15,
+    aus: 400,
+  },
+};
+
+let aStr = JSON.stringify(a);
+
+console.log(aStr);
+
+let b = JSON.parse(aStr);
+
+b.x=100;
+b.y.ind=100;
+
+console.log(a);
+console.log(b);
