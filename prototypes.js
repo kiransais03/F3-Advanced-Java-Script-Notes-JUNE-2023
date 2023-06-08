@@ -1,5 +1,3 @@
-console.log('test');
-
 // objB is inherting from objA
 
 /// properties of objA will be 
@@ -32,9 +30,9 @@ let arr=[1,2,3];
 // from Array.
 // Array is inherting propeties from Object.
 
-function abc(){
-    console.log('hhh');
-}
+// function abc(){
+//     console.log('hhh');
+// }
 
 //// abc is inherting properties
 /// from Function. 
@@ -44,3 +42,32 @@ function abc(){
 ///abc.__proto__.__proto__.__proto__ -> null;
 
 // prototype chain
+/// Prototypycal inheritance
+let obj1 = {
+    name:'pc',
+    city:'Blr',
+    placeOfBirth: 'Dilli',
+    getInro(){
+        console.log(this.name, this.city, this.placeOfBirth);
+    }
+}
+
+let obj2={
+    name:'Satish',
+    city:'Delhi',
+}
+
+// obj2 is inherting from Object
+// obj2.__proto__
+
+obj2.__proto__ = obj1;
+
+
+/// obj2.__proto__ -> Object.prototype
+/// obj2.__proto__.__proto__ -> null;
+
+/// obj1.__proto__ -> Object.prototype
+/// obj1.__proto__.__proto__ -> null;
+
+
+// obj2.__proto__.__proto__.__proto__ -> null
