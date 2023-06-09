@@ -60,14 +60,19 @@ let obj2={
 // obj2 is inherting from Object
 // obj2.__proto__
 
-obj2.__proto__ = obj1;
 
 
-/// obj2.__proto__ -> Object.prototype
-/// obj2.__proto__.__proto__ -> null;
+// this is how initially things were
+// / obj2.__proto__ -> Object.prototype
+// / obj2.__proto__.__proto__ -> null;
 
-/// obj1.__proto__ -> Object.prototype
-/// obj1.__proto__.__proto__ -> null;
+// obj2.__proto__ = obj1;
+// obj2.__proto__ -> obj1
+// / obj1.__proto__ -> Object.prototype
+// / obj2.__proto__.__proto__.__proto__ -> null;
 
 
 // obj2.__proto__.__proto__.__proto__ -> null
+
+// obj2.__proto__ -> Object.prototype
+// obj2.__proto__.__proto__
