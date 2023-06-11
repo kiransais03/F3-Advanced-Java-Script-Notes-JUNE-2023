@@ -57,6 +57,7 @@ let obj2={
     city:'Delhi',
 }
 
+obj2.__proto__ = obj1;
 // obj2 is inherting from Object
 // obj2.__proto__
 
