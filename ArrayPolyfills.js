@@ -90,7 +90,7 @@ function customFlat(arr,depth=1){
   let result=[];
   arr.forEach(element => {
     if (Array.isArray(element) & (depth > 0)) {
-      result.push(...customFlat(element, depth - 1));
+      result.push(...(customFlat(element, depth - 1)));
     } else result.push(element);
   });
   return result;
