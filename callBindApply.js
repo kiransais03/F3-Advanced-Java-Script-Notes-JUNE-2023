@@ -4,7 +4,34 @@
 // inside functions. independent of how the
 // function is called.
 
-// Call
+
+let obj = {
+    nam: 'PC',
+};
+
+function sayHello(age, company){
+    // return "Hello " + this.nam + " is " + age + " " + company;
+    return this;
+}
+
+// console.log(sayHello());
+// console.log(sayHello.call(obj,23, 'walmart'));
+console.log(sayHello.call(obj,23,'walmart'));
+
+// let obj = {
+//     name: 'PC',
+//     sayHello(age, company){
+//         return "Hello " + this.name + " is " + age + " " + company;
+//     }
+// };
+
+// console.log(obj.sayHello(23,'walmart'));
+
+
+
+// /// call -> obj, arguments
+
+// // Apply
 // let obj = {
 //     name: 'PC',
 // };
@@ -13,22 +40,8 @@
 //     return "Hello " + this.name + " is " + age + " " + company;
 // }
 
-// // console.log(sayHello());
 // console.log(sayHello.call(obj,23, 'walmart'));
-
-// /// call -> obj, arguments
-
-// Apply
-let obj = {
-    name: 'PC',
-};
-
-function sayHello(age, company){
-    return "Hello " + this.name + " is " + age + " " + company;
-}
-
-console.log(sayHello.call(obj,23, 'walmart'));
-console.log(sayHello(23,'walmart'));
+// console.log(sayHello(23,'walmart'));
 
 ///Bind
 
