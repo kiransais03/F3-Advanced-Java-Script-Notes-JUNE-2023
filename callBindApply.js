@@ -15,9 +15,11 @@ function sayHello(age, company){
 }
 
 // console.log(sayHello());
-// console.log(sayHello.call(obj,23, 'walmart'));
-console.log(sayHello.call(obj,23,'walmart'));
-
+console.log(obj);
+console.log(sayHello.call(obj,23, 'walmart'));
+console.log(obj);
+// console.log(sayHello.call(obj,23,'walmart'));
+// call is a method for a function (object,......);
 // let obj = {
 //     name: 'PC',
 //     sayHello(age, company){
